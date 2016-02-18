@@ -18,29 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-Rf-iPP">
-                                <rect key="frame" x="0.0" y="357" width="600" height="243"/>
+                                <rect key="frame" x="0.0" y="330" width="600" height="270"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="243" id="Xw6-l0-22j"/>
+                                    <constraint firstAttribute="height" constant="270" id="Xw6-l0-22j"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhE-pJ-YKo">
-                                <rect key="frame" x="0.0" y="64" width="600" height="293"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="266"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwD-fe-OSL">
-                                        <rect key="frame" x="277" y="104" width="46" height="86"/>
+                                        <rect key="frame" x="277" y="90" width="46" height="86"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="GwD-fe-OSL" firstAttribute="centerX" secondItem="AhE-pJ-YKo" secondAttribute="centerX" id="5Mu-Ld-LM1"/>
                                     <constraint firstItem="GwD-fe-OSL" firstAttribute="centerY" secondItem="AhE-pJ-YKo" secondAttribute="centerY" id="8DL-mX-r83"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CS2-6b-Ju7">
-                                <rect key="frame" x="180" y="414.5" width="240" height="128"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CS2-6b-Ju7">
+                                <rect key="frame" x="180" y="400" width="240" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdC-1I-dfO">
                                         <rect key="frame" x="0.0" y="27" width="73" height="73"/>
@@ -61,7 +62,12 @@
                                             <constraint firstAttribute="height" constant="73" id="jzJ-q8-ZTv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Reset" backgroundImage="whiteCircle"/>
+                                        <state key="normal" title="Pause" backgroundImage="whiteCircle">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionPauseResumeClicked:" destination="qhc-wn-Z5S" eventType="touchUpInside" id="erR-86-fqH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -74,6 +80,12 @@
                                     <constraint firstItem="TdC-1I-dfO" firstAttribute="leading" secondItem="CS2-6b-Ju7" secondAttribute="leading" id="pXO-KP-V9w"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-ne-mkQ">
+                                <rect key="frame" x="265" y="361.5" width="70.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,14 +96,18 @@
                             <constraint firstItem="gzP-Rf-iPP" firstAttribute="top" secondItem="AhE-pJ-YKo" secondAttribute="bottom" id="Nir-ch-dia"/>
                             <constraint firstItem="AhE-pJ-YKo" firstAttribute="leading" secondItem="vnp-fe-2Oe" secondAttribute="leading" id="OIw-9h-HfC"/>
                             <constraint firstItem="CS2-6b-Ju7" firstAttribute="centerY" secondItem="gzP-Rf-iPP" secondAttribute="centerY" id="eVr-ie-k26"/>
+                            <constraint firstItem="CS2-6b-Ju7" firstAttribute="top" secondItem="ZYu-ne-mkQ" secondAttribute="bottom" constant="8.5" id="eo2-J8-TkN"/>
                             <constraint firstItem="AhE-pJ-YKo" firstAttribute="top" secondItem="Sk7-pv-Pgo" secondAttribute="bottom" id="te8-G3-H27"/>
                             <constraint firstAttribute="trailing" secondItem="gzP-Rf-iPP" secondAttribute="trailing" id="xyW-zy-4C6"/>
+                            <constraint firstItem="ZYu-ne-mkQ" firstAttribute="centerX" secondItem="CS2-6b-Ju7" secondAttribute="centerX" id="zRc-6L-kAJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="App Name" id="Dgk-61-TyG"/>
                     <connections>
+                        <outlet property="btnPauseResume" destination="ePz-W0-8Sc" id="bdT-zn-2Rh"/>
                         <outlet property="btnRandomizeLetter" destination="TdC-1I-dfO" id="H4K-Ee-qeA"/>
                         <outlet property="lblLetter" destination="GwD-fe-OSL" id="I20-xx-bDK"/>
+                        <outlet property="lblTimer" destination="ZYu-ne-mkQ" id="cvg-jO-wqg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXy-M2-smt" userLabel="First Responder" sceneMemberID="firstResponder"/>
