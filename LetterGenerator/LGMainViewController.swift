@@ -15,6 +15,7 @@ class LGMainViewController: UIViewController {
     @IBOutlet weak var btnRandomizeLetter: UIButton!
     @IBOutlet weak var btnPauseResume: UIButton!
     
+    let TIME = 120
     var loopControl = 0
     var time = 120
     var timerSeconds = NSTimer()
@@ -52,11 +53,14 @@ class LGMainViewController: UIViewController {
     
     @IBAction func actionRandomizeLetterClicked(sender: AnyObject) {
         //26
+        self.btnPauseResume.setTitle("Pause", forState: .Normal)
+        self.btnPauseResume.tintColor = UIColor.redColor()
+        
         self.timerSeconds.invalidate()
         self.btnRandomizeLetter.enabled = false
         self.btnPauseResume.enabled = true
         self.isPaused = false
-        self.time = 120
+        self.time = TIME
         self.calculateTime(time)
         timerSeconds = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
         timerLetterChange = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "updateLetter", userInfo: nil, repeats: true)

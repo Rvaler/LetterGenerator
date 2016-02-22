@@ -401,7 +401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetterGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RafaelValer.LetterGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = LetterGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -412,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LetterGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RafaelValer.LetterGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = LetterGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -484,6 +484,7 @@
 				54292BFE1C74AB5F0041ABB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54292BFF1C74AB5F0041ABB7 /* Build configuration list for PBXNativeTarget "LetterGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				54292C011C74AB5F0041ABB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54292C021C74AB5F0041ABB7 /* Build configuration list for PBXNativeTarget "LetterGeneratorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +502,7 @@
 				54292C041C74AB5F0041ABB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
